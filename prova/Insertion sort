@@ -27,14 +27,33 @@ void inserstion_sort(int array[], int n){
         int j = i -1;
         
         while(j >=0 && array[j] > chave){
-            array[j+1] = j;
+            array[j+1] = array[j];
             j --;
         }
         array[j+1] = chave;
         
         
-        printf("%d", i);
-        imprimir_array;
+         // Mostra o array após cada iteração
+        printf("Iteração %d: ", i);
+        imprimir_array(array, n);
+    }
+}
+
+void insertion_sort(int arr[], int n){
+    for(int i = 1; i < n; i++){
+        int chave = arr[i];
+        int j = i - 1;
+        
+        while(j >= 0 && arr[j] > chave){
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        
+        arr[j + 1] = chave;
+
+        // Mostra o array após cada iteração
+        printf("Iteração %d: ", i);
+        imprimir_array(arr, n);
     }
 }
 
