@@ -1,0 +1,80 @@
+#include <stdio.h>
+
+/*
+=====DECLARANDO VARIÁVEIS GLOBAIS ===========
+*/
+
+    #define max 10
+    
+    int pilha[max];
+    int topo = -1;
+    
+/*
+=====  CRIANDO FUNÇÕES =========
+*/    
+    
+int olhar_para_topo(){
+    if (topo == -1){
+        printf("ERRO: Pilha Vazia!\n");
+        return -1;
+    
+    }
+    return pilha[topo];
+}
+
+void empilhar(int valor){
+    if(topo == max -1){
+        printf("ERRO: estouro de pilha!\n");
+        return;
+    }
+    
+    topo++;
+    pilha[topo] = valor;
+    
+}
+
+int desemplihar(){
+    if(topo == -1){
+        printf("ERRO: pilha já está vazia!\n");
+        return -1;
+    }
+    
+    
+    topo--;
+    return pilha[topo];
+}
+
+int esvaziar(){
+    if(topo == -1){
+        printf("Erro: pilha está vazia!\n");
+        return -1;
+    }
+    
+    for(int i = topo; i >topo; i--){
+        desemplihar();
+    }
+}
+
+int isVazia(){
+    if(topo == -1){
+        printf("A PILHA ESTÁ VAZIA!\n");
+        return -1;
+    }
+    else
+    printf("A pilha tem Coisa!!\n");
+}
+
+int 
+
+
+/*
+======= CÓDIGO NA MINHA MAIN ========
+*/
+
+int main()
+{
+  empilhar(15);    
+  isVazia();
+
+    return 0;
+}
