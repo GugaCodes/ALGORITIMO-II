@@ -1,0 +1,21 @@
+Crie uma pilha com push, pop e top (ou peek). Use array fixo e defina um tamanho
+máximo.
+
+PUSH(33)
+PUSH(14)
+PUSH(10)
+PUSH(16)
+POP()
+POP()
+PUSH(16)
+PEEK()
+
+
+
+
+	16
+TOPO:	16
+	14
+	33
+
+PEEK: 16
